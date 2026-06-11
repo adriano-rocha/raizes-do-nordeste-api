@@ -5,6 +5,7 @@ import produtosRoutes from './api/routes/produtos.routes.js'
 import estoqueRoutes from './api/routes/estoque.routes.js'
 import pedidosRoutes from './api/routes/pedidos.routes.js'
 import pagamentosRoutes from './api/routes/pagamentos.routes.js'
+import fidelidadeRoutes from './api/routes/fidelidade.routes.js'
 
 const app = express()
 
@@ -16,6 +17,7 @@ app.use('/produtos', produtosRoutes)
 app.use('/estoque', estoqueRoutes)
 app.use('/pedidos', pedidosRoutes)
 app.use('/pagamentos', pagamentosRoutes)
+app.use('/fidelidade', fidelidadeRoutes)
 
 app.get('/', (req, res) => {
   res.json({ message: 'Raízes do Nordeste API funcionando!' })
