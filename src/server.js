@@ -1,11 +1,13 @@
 import express from 'express'
 import authRoutes from './api/routes/auth.routes.js'
+import unidadesRoutes from './api/routes/unidades.routes.js'
 
 const app = express()
 
 app.use(express.json())
 
 app.use('/auth', authRoutes)
+app.use('/unidades', unidadesRoutes)
 
 app.get('/', (req, res) => {
   res.json({ message: 'Raízes do Nordeste API funcionando!' })
