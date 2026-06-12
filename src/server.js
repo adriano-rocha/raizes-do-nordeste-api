@@ -1,4 +1,6 @@
 import express from 'express'
+import swaggerUi from 'swagger-ui-express'
+import swaggerSpec from './infrastructure/swagger.js'
 import authRoutes from './api/routes/auth.routes.js'
 import unidadesRoutes from './api/routes/unidades.routes.js'
 import produtosRoutes from './api/routes/produtos.routes.js'
@@ -10,6 +12,8 @@ import fidelidadeRoutes from './api/routes/fidelidade.routes.js'
 const app = express()
 
 app.use(express.json())
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
 app.use('/auth', authRoutes)
 app.use('/unidades', unidadesRoutes)
