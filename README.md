@@ -69,7 +69,7 @@ npm run dev
 
 ### 7. Acesse a documentação
 
-http://localhost:3000/docs
+[http://localhost:3000/docs](https://raizes-do-nordeste-api-production.up.railway.app/docs)
 
 ## Endpoints
 
